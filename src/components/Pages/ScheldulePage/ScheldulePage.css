@@ -1,0 +1,128 @@
+.orar12 {
+    background: #25975a;
+    color: white;
+    border: 1px solid white;
+    width: 5%;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+.orartable {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    width: 520px;
+    align-self: center;
+    margin-left: 10px;
+}
+.time {
+    height: 60px;
+    width: 60px;
+}
+tr {
+    height: 30px;
+}
+td {
+    font-size: 0.8em;
+    border: 1px solid black;
+    background-color: rgb(136, 204, 184);
+}
+tr {
+    height: 2px;
+}
+.time1 {
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+    width: 15%;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+.Recriatie {
+    color: rgb(0, 0, 0);
+    border: 1px solid white;
+    width: 15%;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+.s1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+    font-family: Nunito;
+    font-size: 20px;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    align-self: center;
+    margin-left: 10px;
+}
+.Schedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.01fr 0.07fr 1fr 0.01fr 0.07fr 1fr;
+    margin-left: 90px;
+}
+.s2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+    font-family: Nunito;
+    font-size: 20px;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    align-self: center;
+    margin-left: 10px;
+}
+.orartable1 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    width: 530px;
+    align-self: center;
+    margin-left: 10px;
+}
+.s3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    width: 100%;
+    height: 100%;
+    font-family: Nunito;
+    font-size: 20px;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    align-self: center;
+    margin-left: 10px;
+}
+.orartable2 {
+    grid-column-start: 1;
+    grid-row-start: 6;
+    width: 530px;
+    align-self: center;
+    margin-left: 10px;
+}
+.s4 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    width: 100%;
+    height: 100%;
+    font-family: Nunito;
+    font-size: 20px;
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    align-self: center;
+    margin-left: 10px;
+}
+.orartable3 {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    width: 530px;
+    align-self: center;
+    margin-left: 10px;
+}
