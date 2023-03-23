@@ -1,0 +1,15 @@
+.container {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+tr:hover {
+  background-color: rgb(255, 136, 0);
+}

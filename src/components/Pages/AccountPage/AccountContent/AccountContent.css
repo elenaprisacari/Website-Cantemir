@@ -1,0 +1,83 @@
+.accountContentconteiner {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+.accountContentconteiner .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 30px;
+    box-sizing: border-box;
+}
+
+.accountContentconteiner .header .name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accountContentconteiner .header .buttonContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.accountContentconteiner .header .buttonContainer .buttonImage {
+    height: 35px;
+}
+
+.accountContentconteiner .header .buttonContainer .buttonText {
+    margin: 5px 0px;
+}
+
+.accountContentconteiner .name,
+.buttonContainer {
+    margin: 0px 10px;
+}
+
+.accountContentconteiner .header2 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(82, 162, 82);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.accountContentconteiner .header2 .menuButton {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.accountContent .personalDataContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    align-items: center;
+    margin: 40px;
+}
+
+.accountContent .personalDataContainer .personalImage {
+    align-self: start;
+    height: 400px;
+}
+
+.accountContent .personalDataContainer .dataField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.accountContent .personalDataContainer .text {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.accountContent .personalDataContainer .data {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+    margin: 10px;
+}

@@ -1,0 +1,125 @@
+.header {
+    width: 100%;
+}
+
+.header .hed {
+    background: rgba(157, 177, 136, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .hed .headerUnit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.header .hed .headerUnit .composed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.header .hed .headerUnit .composed .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .hed .headerUnit .composed .container .imageLogo {
+    width: 20px;
+    height: auto;
+}
+
+.header .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .search .container {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .search .container .logoNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.header .search .container .logoNameContainer .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .search .container .logoNameContainer .titleContainer .title {
+    text-align: center;
+    font-weight: 500;
+}
+
+.header .search .container .logoNameContainer .logo {
+    height: 150px;
+}
+
+.header .search .container .searchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.header .search .container .searchContainer .aaaImage {
+    width: 38px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.header .search .container .searchContainer .controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .search .container .searchContainer .controls .flags {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header .search .container .searchContainer .controls .flags .flagImage {
+    width: 35px;
+    height: 20px;
+}
+
+.header .menu {
+    background-color: rgba(45, 112, 43, 0.59);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header .menu .menuOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .menu .menuOption .text {
+    cursor: pointer;
+    text-align: center;
+}

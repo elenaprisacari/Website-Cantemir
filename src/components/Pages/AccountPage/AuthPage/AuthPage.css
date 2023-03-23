@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 20%;
+}
+
+.label {
+    font-size: 12px;
+}
+
+.button {
+    border: 0px;
+    font-weight: 600;
+    color: white;
+    background-color: #5fc65d;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.button:hover {
+    background-color: #8ce28a;
+}
+
+.title {
+    font-weight: 600;
+    margin: 0px;
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+}
+
+.error {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(249, 112, 112);
+    padding: 10px;
+}
+
+.helloContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.helloContainer .module {
+    background-color: rgb(233, 222, 250);
+    border-radius: 50px;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    width: 20%;
+}
+
+.helloContainer .module .image {
+    height: 200px;
+}
+
+.helloContainer .module .text {
+    margin: 10px 0px;
+    text-align: center;
+}
