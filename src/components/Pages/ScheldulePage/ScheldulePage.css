@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden !important;   
+    }
+
 .orar12 {
     background: #25975a;
     color: white;
@@ -12,7 +16,7 @@
 .orartable {
     grid-column-start: 1;
     grid-row-start: 3;
-    width: 520px;
+    width: 530px;
     align-self: center;
     margin-left: 10px;
 }
