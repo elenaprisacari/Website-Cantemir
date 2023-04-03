@@ -1,0 +1,37 @@
+.courseContainer {
+    width: 60%;
+    margin: 10px auto;
+    background-color: rgb(207, 227, 162);
+    padding: 20px;
+    font-size: 14px;
+}
+.courseContainer .courseTitle {
+    font-weight: 600;
+}
+
+.courseContainer .courseDate {
+    margin: 20px 0px;
+}
+
+.courseContainer .dataImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.courseContainer .dataImageContainer .dataContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.courseContainer .dataImageContainer .label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.courseContainer .dataImageContainer .courseImage {
+    height: 150px;
+    margin: 20px;
+}

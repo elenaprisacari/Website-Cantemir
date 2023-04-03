@@ -1,0 +1,42 @@
+.schelduleContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px auto;
+    width: 25%;
+    background-color: rgb(207, 227, 162);
+}
+
+.schelduleContainer .schelduleSelect {
+    background-color: rgb(231, 241, 208);
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.schelduleContainer .schelduleList {
+    font-size: 18px;
+    background-color: rgb(217, 233, 181);
+    margin: 10px;
+    text-align: left;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.schelduleContainer .schelduleList .element tr {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.schelduleContainer .schelduleList .element td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.schelduleContainer .schelduleList .element .value {
+    width: 90%;
+}
+
+.schelduleContainer .schelduleList .element .index {
+    text-align: center;
+    width: 10%;
+}

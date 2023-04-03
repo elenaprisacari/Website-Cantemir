@@ -20,7 +20,8 @@ class Content extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: DataBase.users.filter((user) => user.username === "teacherElena")[0],
+            // user: DataBase.users.filter((user) => user.username === "teacherElena")[0],
+            user: undefined,
         };
     }
 
@@ -47,7 +48,13 @@ class Content extends React.Component {
             case Pages.Questions:
                 return <QuestionsPage />;
             case Pages.Account:
-                return <AccountPage loggedUser={this.state.user} handleUser={(user) => this.setState({ user: user })} logout={() => this.setState({ user: undefined })} />;
+                return (
+                    <AccountPage
+                        loggedUser={this.state.user}
+                        handleUser={(user) => this.setState({ user: user })}
+                        logout={() => this.setState({ user: undefined })}
+                    />
+                );
             default:
                 return <div>not found</div>;
         }

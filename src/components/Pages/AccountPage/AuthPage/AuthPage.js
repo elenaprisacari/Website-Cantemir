@@ -84,7 +84,7 @@ class AuthPage extends React.Component {
                                     return <label className="label">Код родителя:</label>;
                                 case Roles.Teacher:
                                     return <label className="label">Код учителя:</label>;
-                                case Roles.Student:
+                                default:
                                     return <label className="label">Код ученика:</label>;
                             }
                         })()}
@@ -98,7 +98,7 @@ class AuthPage extends React.Component {
                     <button onClick={this.processAuth} className="button">
                         Войти
                     </button>
-                    <button onClick={() => this.setState({ showHello: true })} className="button">
+                    <button onClick={() => this.setState({ showHello: true, error: "" })} className="button">
                         Назад
                     </button>
                 </div>

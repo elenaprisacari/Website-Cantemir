@@ -6,7 +6,11 @@ import AccountPages from "../../../../model/AccountPages";
 import settingsImage from "../../../../assets/img/settingsIcon.svg";
 import exitImage from "../../../../assets/img/exitIcon.svg";
 import helpImage from "../../../../assets/img/helpIcon.svg";
-import noImage from "../../../../assets/img/noImage.svg";
+import { DataBase } from "../../../../model/DataBase";
+
+import Scheldule from "./Scheldule/Scheldule";
+import PersonalData from "./PersonalData/PersonalData";
+import Course from "./Course/Course";
 
 class AccountContent extends React.Component {
     constructor(props) {
@@ -14,15 +18,13 @@ class AccountContent extends React.Component {
         this.state = {
             user: props.loggedUser,
             activePage: AccountPages.Scheldule,
-            image: undefined,
         };
-        this.loadImage();
         this.handleOutput = this.handleOutput.bind(this);
     }
 
     render() {
         return (
-            <div className="accountContentconteiner">
+            <div className="accountContentContainer">
                 <div className="header">
                     <div className="name">{this.state.user.firstName + " " + this.state.user.lastName}</div>
                     <div className="buttonContainer">
@@ -39,27 +41,42 @@ class AccountContent extends React.Component {
                     </div>
                 </div>
                 <div className="header2">
-                    <p style={this.state.activePage === AccountPages.Scheldule ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.Scheldule)}>
+                    <p
+                        style={this.state.activePage === AccountPages.Scheldule ? { color: "#673d37" } : {}}
+                        className="menuButton"
+                        onClick={() => this.setState({ activePage: AccountPages.Scheldule })}
+                    >
                         Расписание
                     </p>
-                    {this.state.user.role === Roles.Teacher && (
-                        <p style={this.state.activePage === AccountPages.Classes ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.Classes)}>
-                            Классы
-                        </p>
-                    )}
-                    <p style={this.state.activePage === AccountPages.ERegister ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.ERegister)}>
+                    <p
+                        style={this.state.activePage === AccountPages.ERegister ? { color: "#673d37" } : {}}
+                        className="menuButton"
+                        onClick={() => this.setState({ activePage: AccountPages.ERegister })}
+                    >
                         Электронный журнал
                     </p>
-                    <p style={this.state.activePage === AccountPages.PersonalData ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.PersonalData)}>
+                    <p
+                        style={this.state.activePage === AccountPages.PersonalData ? { color: "#673d37" } : {}}
+                        className="menuButton"
+                        onClick={() => this.setState({ activePage: AccountPages.PersonalData })}
+                    >
                         Личные данные
                     </p>
                     {this.state.user.role === Roles.Teacher && (
-                        <p style={this.state.activePage === AccountPages.AvailableCourses ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.AvailableCourses)}>
+                        <p
+                            style={this.state.activePage === AccountPages.AvailableCourses ? { color: "#673d37" } : {}}
+                            className="menuButton"
+                            onClick={() => this.setState({ activePage: AccountPages.AvailableCourses })}
+                        >
                             Доступные курсы
                         </p>
                     )}
                     {this.state.user.role === Roles.Student && (
-                        <p style={this.state.activePage === AccountPages.Activity ? { color: "#673d37" } : {}} className="menuButton" onClick={() => this.handleMenu(AccountPages.Activity)}>
+                        <p
+                            style={this.state.activePage === AccountPages.Activity ? { color: "#673d37" } : {}}
+                            className="menuButton"
+                            onClick={() => this.setState({ activePage: AccountPages.Activity })}
+                        >
                             Активность
                         </p>
                     )}
@@ -74,15 +91,15 @@ class AccountContent extends React.Component {
             case AccountPages.Activity:
                 return;
             case AccountPages.AvailableCourses:
-                return;
-            case AccountPages.Classes:
-                return;
+                return DataBase.availableCourses[this.state.user.username].map((value, index) => {
+                    return <Course key={index} course={value}></Course>;
+                });
             case AccountPages.ERegister:
                 return;
             case AccountPages.PersonalData:
-                return this.createPersonalData();
-            case AccountPages.Scheldule:
-                return;
+                return <PersonalData user={this.state.user}></PersonalData>;
+            default:
+                return <Scheldule user={this.state.user}></Scheldule>;
         }
     }
 
@@ -90,63 +107,6 @@ class AccountContent extends React.Component {
         this.setState({ user: undefined });
         this.props.logout();
     }
-
-    handleMenu(value) {
-        this.setState({ activePage: value });
-    }
-
-    createPersonalData() {
-        return (
-            <div className="personalDataContainer">
-                <img className="personalImage" src={this.state.image} alt="" />
-                <div className="dataContainer">
-                    <div className="dataField">
-                        <p className="text">Фамилия:</p>
-                        <p className="data">{this.state.user.firstName}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Имя:</p>
-                        <p className="data">{this.state.user.lastName}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Отчество:</p>
-                        <p className="data">{this.state.user.patronymic}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Пол:</p>
-                        <p className="data">{this.state.user.sex}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">День рождения:</p>
-                        <p className="data">{this.state.user.birthday}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Место рождения:</p>
-                        <p className="data">{this.state.user.bornPlace}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Адресс:</p>
-                        <p className="data">{this.state.user.address}</p>
-                    </div>
-                    <div className="dataField">
-                        <p className="text">Национальность:</p>
-                        <p className="data">{this.state.user.ethnicity}</p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
-    loadImage = async () => {
-        try {
-            const { default: src } = await import(`../../../../assets/img/${this.state.user.image}`);
-            this.setState({ image: src });
-            console.log(src);
-        } catch (err) {
-            console.log(err);
-            this.setState({ image: noImage });
-        }
-    };
 }
 
 export default AccountContent;

@@ -1,0 +1,28 @@
+.personalDataContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    align-items: center;
+    margin: 40px;
+}
+
+.personalDataContainer .personalImage {
+    align-self: start;
+    height: 400px;
+}
+
+.personalDataContainer .dataField {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.personalDataContainer .text {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.personalDataContainer .data {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+}
